@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <link rel="shortcut icon" href="./public/icon.flower.png">
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="container">
+        <div class="back"></div>
+        <div class="container-body">
+            <header class="container-header">
+                <div class="group-title">
+                    <h1 class="title">Encriptador <strong>de Texto</strong></h1>
+                    <img src="./public/alura_logo.svg" />
+                </div>
+                <div class="group-btns">
+                    <button class="btn btn-help">Instrucciones</button>
+                 </div>
+            </header>
+            <div class="help">
+                <div class="help-content">
+                    <div class="help-header">
+                        <span class="close">X</span>
+                        <h5>Código de Encriptación</h5>
+                    </div>
+                    <div class="help-body">
+                        <ul>
+                            <li>e ⇔ enter</li>
+                            <li>i ⇔ imes</li>
+                            <li>o ⇔ ober</li>
+                            <li>u ⇔ ufat</li>
+                            <li>a ⇔ ai</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <main class="container-content">
+                <div class="container-section">
+                    <section class="section-input">
+                        <div class="card">
+                            <label> ✏️ Ingrese el texto aquí :</label>
+                            <div class="card-input">
+                                <textarea class="text input" onkeyup="validateMessage(this)"></textarea>
+                                <p> ⚠️ Solo se admiten letras en minúscula y sin acentos.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-btns">
+                        <button class="btn btn-on">Encriptar</button>
+                        <button class="btn btn-off">Desencriptar</button>
+                        <button class="btn btn-cls">Limpiar</button>
+                    </section>
+                    <section class="section-output">
+                        <div class="card">
+                            <div class="msg-default">
+                                <img src="https://i.pinimg.com/originals/a0/46/42/a046426ae8ff112ca886241a9acd70a9.gif" alt="Hellokitty" srcset="">
+                                <h4>Ningún mensaje fue encontrado</h4>
+                                <p>Ingrese el texto que desee encriptar o desencriptar.</p>
+                            </div>
+                            <div class="msg-result">
+                                <label>Mensaje:</label>
+                                <div class="result">
+                                    <textarea class="text output" disabled></textarea>
+                                    <button class="btn btn-copy">Copiar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <footer class="container-footer">
+            <p class="credits">🌻​ Coded by <a href="https://github.com/anabelGerez">@anabelGerez​</a> 🌻​</p>
+        </footer>
+    </div>
+    <script src="scripts/encryptor.js"></script>
+</body>
+</html>
+
+

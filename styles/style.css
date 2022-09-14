@@ -1,0 +1,480 @@
+
+
+:root {
+    --text-light: #ffffff;
+    --text-medium: #caafa4;
+    --text-semidark: #ffffff;
+    --text-dark: #ffffff;
+    --back-color: #EBEDEF;
+    --nav-color: #7d978a;
+    --card-color: #FFFFFF;
+    --border-color: #E2E8F0;
+    --border-focus-color: #D0D7E1;
+    --btn0-color: #b1b1b1;
+    --btn0-hover-color: #477A9C;
+    --btn1-color: #205375;
+    --btn1-hover-color: #133A55;
+    --btn2-color: #D0D7E1;
+    --btn2-hover-color: #AEBCCB;
+    --text-font: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--text-font);
+    letter-spacing: 1px;
+}
+
+.container {
+    height: 100vh;
+   
+background-color: #afbe78;
+
+ 
+  
+}
+
+.container-body {
+    height: calc(106% - 32px);
+    background-color: #afbe78;
+}
+
+.back {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 99%;
+    height: 99%;
+    background-color: rgba(35, 46, 57,0.6);
+    background-color: #afbe78;
+}
+
+.container-header {
+    display: grid;
+    margin: 0 5rem;
+    padding: 2rem 0 0;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 35px;
+
+}
+
+.group-title {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.title {
+ font-family: consolas;
+    font-size: 46px;
+    font-weight: bolder;
+color: #ffffff;
+}
+
+.title > strong {
+   color: #ffffffcb;
+font-family: consolas;
+   font-weight: bolder;
+   font-size: 46px;
+}
+
+.group-title > img {
+    margin: auto 0 auto auto;
+    width: 60px;
+}
+
+.group-btns {
+    display: grid;
+    margin: 10px 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.help {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.help-content {
+    margin: 15% auto;
+    width: 18%;
+   background-color: #E2E8F0;
+    border-radius: 5px;
+}
+
+.help-header {
+    padding: 10px 15px;
+    width: 100%;
+    color: var(--text-light);
+  background-color: #afbe78;
+}
+
+.close {
+    float: right;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.close:hover, .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.help-body {
+    padding: 13px 0;
+    font-size: 15px;
+    text-align: center;
+    font-family: consolas;
+}
+
+.help-body > ul {
+    list-style: none;
+}
+
+.container-content {
+    margin: 1rem 5rem 2.5rem;
+}
+
+.container-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 75px;
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.section-input {
+    grid-column: 1;
+    grid-row: 1/2;
+}
+
+.section-btns {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-rows: 50px;
+    column-gap: 30px;
+    grid-column: 1;
+    grid-row: 2/3;
+}
+
+.section-output {
+    grid-column: 2;
+    grid-row: 1/2;
+}
+
+.card {
+    height: 100%;
+    padding: 25px 35px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+    font-family: consolas;
+    font-weight: bolder;
+    box-shadow: rgb(0, 0, 0) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+   
+}
+
+.card > label, .msg-result > label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card-input {
+    display: grid;
+    grid-template-rows: 22rem 1rem;
+    row-gap: .5rem;
+    border-radius: 32px;
+   
+}
+
+.card-input > p {
+    text-align: right;
+    font-size: 13px;
+}
+
+.text {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 13px;
+   
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.input {
+    resize: none;
+    color: #fff;
+}
+
+.input:focus {
+    color: #D0D7E1;
+}
+
+.output {
+    grid-row: 1;
+    resize: none;
+    border: none;
+}
+
+.btn {
+    font-family: var(--text-font);
+    letter-spacing: 1px;
+    border: none;
+   
+    box-shadow: rgb(0, 0, 0) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+   
+}
+
+.btn-help {
+    grid-column: 1;
+    font-weight: 500;
+   color: black;
+   font-family: consolas;
+   background-color: #fff    ;
+    transition: all 200ms ease;
+    box-shadow: rgb(0, 0, 0) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+   
+}
+
+.btn-help:hover {
+    cursor: pointer;
+background-color: #FFFFFF;
+}
+
+.btn-info {
+    grid-column: 2;
+    background-color: #fff;
+    transition: all 200ms ease;
+}
+
+.btn-info:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.btn-on {
+    grid-column: 1;
+    grid-row: 1;
+    color: black;
+    font-family: consolas;
+    background-color: #FFFFFF;
+    transition: all 200ms ease;
+}
+
+.btn-on:hover {
+    cursor: pointer;
+    font-family: consolas;;
+
+  background-color: #FFFFFF;
+}
+
+.btn-off {
+    grid-column: 2;
+    grid-row: 1;
+    font-family: consolas;
+
+  background-color: #fff;
+    transition: all 200ms ease;
+}
+
+.btn-off:hover {
+    cursor: pointer;
+    
+  background-color: #fff;
+}
+
+.btn-cls {
+    grid-column: 3;
+    grid-row: 1;
+
+
+    border: 2px solid var(--btn2-hover-color);
+    transition: all 200ms ease;
+}
+
+.btn-cls:hover {
+    cursor: pointer;
+   font-family: consolas;
+  background-color: #fff;
+}
+
+.btn-copy {
+    width: 60%;
+    height: 50px;
+    grid-row: 2;
+
+    border: 2px solid var(--btn2-hover-color);
+    transition: all 200ms ease;
+}
+
+.btn-copy:hover {
+    cursor: pointer;
+  background-color: #fff;
+
+}
+
+.msg-default {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-default > img {
+    width: 90%;
+}
+
+.msg-default > p {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.msg-result {
+    display: none;
+    height: 100%;
+}
+
+.result {
+    display: grid;
+    grid-template-rows: 25rem 50px;
+    row-gap: 20px;
+    justify-items: center;
+}
+
+.container-footer {
+    display: flex;
+    font-family: consolas;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: #fff;
+    
+}
+
+.credits {
+    line-height: 32px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.credits > a, .credits > a:-webkit-any-link {
+    color: var(--text-medium);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.credits > a:hover {
+    color: var(--text-light);
+}
+
+@media only screen and (max-width: 1199px) {
+    .title {
+        font-size: 42px;
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+    .group-title {
+        grid-template-columns: 4fr 1fr;
+    }
+    .title {
+        font-size: 38px;
+    }
+    .group-btns .btn {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .group-title {
+        grid-template-columns: 5fr 1fr;
+    }
+    .title {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .container {
+        height: 100%;
+    }
+
+    .container-header {
+        margin: 0 2.5rem;
+        padding: 1.5rem 0 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 28px;
+    }
+
+    .container-section {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 50px auto;
+        row-gap: 20px;
+    }
+
+    .group-title > img {
+        margin: auto 0 auto 60px;
+        width: 60px;
+    }
+
+    .group-btns {
+        margin: 3px 0;
+        column-gap: 20px;
+    }    
+
+    .help-content {
+        margin: 45% auto;
+        width: 60%;
+    }
+
+    .container-content {
+        margin: 1rem 2.5rem 3rem;
+    }
+    
+    .container-section {
+        width: 100%;
+    }
+
+    .section-btns {
+        column-gap: 15px;
+    }
+
+    .section-output {
+        grid-column: 1;
+        grid-row: 3/4;
+    }
+
+    .card-input {
+        grid-template-rows: 15rem 1rem;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .result {
+        grid-template-rows: 15rem 50px;
+    }
+}
