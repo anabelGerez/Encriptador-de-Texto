@@ -13,7 +13,7 @@ Sistema que permite encriptar o desencriptar un texto ingresado por el usuario b
 
 <img src="./public/Prueba.png" />
 
-<img src="" width="700"/>
+
  
 
 # 🔎  - Código de Encriptación
@@ -27,11 +27,11 @@ Sistema que permite encriptar o desencriptar un texto ingresado por el usuario b
   
 
 #  📌 - Requisitos
-- 📎 La página debe tener campos para la inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre esas dos opciones.
-- 📎 Debe ser posible convertir una palabra a su versión encriptada y también devolver una palabra encriptada a su versión original.
-- 📎 Debe funcionar solo con letras minúsculas.
-- 📎 No deben ser utilizadas letras con acentos ni caracteres especiales.
-- 📎 El resultado debe ser mostrado en la pantalla.
+-  La página debe tener campos para la inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre esas dos opciones.
+-  Debe ser posible convertir una palabra a su versión encriptada y también devolver una palabra encriptada a su versión original.
+-  Debe funcionar solo con letras minúsculas.
+-  No deben ser utilizadas letras con acentos ni caracteres especiales.
+-  El resultado debe ser mostrado en la pantalla.
 
 
 # 🌻 - Más información
